@@ -1,15 +1,5 @@
 import React, {useState} from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableHighlight,
-  Pressable,
-  Button,
-  Image,
-  FlatList,
-  TextInput,
-} from 'react-native';
+import {StyleSheet, Text, View, Button, TextInput} from 'react-native';
 import axios from 'axios';
 
 export default function PostData() {
@@ -35,7 +25,6 @@ export default function PostData() {
   };
 
   const postData = () => {
-    /* fetch('https://jsonplaceholder.typicode.com/posts',  */
     axios
       .post('https://jsonplaceholder.typicode.com/posts', {
         name: name,
@@ -58,14 +47,14 @@ export default function PostData() {
         <Button title="Submit Data" onPress={postData}></Button>
       </View>
 
-      {data.length != 0 ? (<View>
+      {data.length != 0 ? (
+        <View>
           <Text style={styles.display_text}>Your Submited Data</Text>
           <Text style={styles.text}>Name - {name}</Text>
           <Text style={styles.text}>Email - {email}</Text>
           <Text style={styles.text}>City - {city}</Text>
-        </View>): null}
-        
-      
+        </View>
+      ) : null}
     </View>
   );
 }
@@ -73,7 +62,7 @@ export default function PostData() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#8CCDF7',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -90,15 +79,16 @@ const styles = StyleSheet.create({
     margin: 10,
     textAlign: 'center',
     width: 200,
-    fontSize:20
+    fontSize: 20,
+    borderColor:"white"
   },
   input_text: {
     fontSize: 20,
     textAlign: 'center',
     fontWeight: 'bold',
   },
-  display_text:{
-      textAlign:'center',
-      marginTop:25
-  }
+  display_text: {
+    textAlign: 'center',
+    marginTop: 25,
+  },
 });

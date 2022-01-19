@@ -3,13 +3,9 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableHighlight,
-  Pressable,
   Button,
-  Image,
   FlatList,
   TextInput,
-  ScrollView,
 } from 'react-native';
 import axios from 'axios';
 
@@ -76,7 +72,7 @@ export default function GetData() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#8CCDF7',
     alignItems: 'center',
     justifyContent: 'center',
   },
