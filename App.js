@@ -1,19 +1,24 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
-
-import { Provider } from 'react-redux';
-
-
-import store from './src/store';
-import CountingApp from './src/CountingApp';
-
-
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight,
+  Pressable,
+  Button,
+  Image
+} from 'react-native';
+import GetData from './src/getData';
+import PostData from './src/postData';
 
 export default function App() {
+ 
   return (
-    <Provider store={store}>
-        <CountingApp/>
-    </Provider>
+   /*  <GetData/>  */ 
+  <PostData/>
+/*     <View>
+<Text>Test</Text>
+    </View> */
   );
 }
 
@@ -25,18 +30,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 100,
-    fontWeight: "bold"
+    fontSize: 40,
+    fontWeight: 'bold',
   },
   button: {
     width: 100,
-    height: 50,
-    margin: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 10,
-    borderColor: "black",
-    borderStyle: "solid",
-    borderWidth: 2
-  }
+  },
 });
